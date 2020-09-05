@@ -34,34 +34,36 @@ struct Administrador
     string telefono;
 };
 
+//Funciones generales
+void Inicializacion(); //Inicializa variables globales
+void Bienvenida(); //Da la bienvenida al proyecto
+void MenuPrincipal(); //Despliega el menú principal
 
-void Inicializacion();
-void Bienvenida();
-void MenuPrincipal();
-
-bool LoginAdmin();
-void MenuAdmin();
-void ConsultarProductos();
+//Funciones Administrador
+bool LoginAdmin(); //Admite el ingreso al sistema como Administrador
+void MenuAdmin(); //Despliega el menú de Administrador
+void ConsultarProductos(); //Muestra los productos insertados en el sistema
 void AgregarComprador();
 void AgregarProducto();
 void ModificarProducto();
 void EliminarProducto();
-void GenerarHistorialParaUsuario();
-void GenerarHistorialParaEmpresa();
+void GenerarHistorialParaUsuario(); //Genera el historial de ventas para un Usuario
+void GenerarHistorialParaEmpresa(); //Genera el historial de ventas para todo el sistema
 
-bool LoginComprador();
-void MenuComprador();
-void VisualizarPorID();
-void VisualizarPorNombre();
-void VisualizarPorValor();
-void AgregarAlCarrito();
-void ImprimirCarrito();
+//Funciones Comprador
+bool LoginComprador(); //Admite el ingreso al sistema como Comprador
+void MenuComprador(); //Despliega el menú de Comprador
+void VisualizarPorID(); //Busca productos por ID
+void VisualizarPorNombre();//Busca productos por Nombre
+void VisualizarPorValor(); //Busca productos por valor
+void AgregarAlCarrito(); //Agrega productos al carrito
+void ImprimirCarrito(); //Muestra en pantalla el carrito actual
 void ModificarCarrito();
 void EliminarDelCarrito();
 void ConfirmarCarrito();
 void GenerarHistorialComprador();
 
-
+//Variables globales
 Administrador administradores[2];
 Comprador compradores[10];
 Producto productos[10];
